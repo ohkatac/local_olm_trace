@@ -1,0 +1,32 @@
+{
+  "name": "local_olm_client",
+  "version": "1.0.0",
+  "description": "local olm trace client",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-react": "^7.8.3",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-hot-loader": "^4.12.19",
+    "sass": "^1.25.0"
+  },
+  "scripts": {
+    "dev": "parcel ./src/index.html --port 8080 --hmr-port 7070",
+    "build": "parcel build ./src/index.html"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "dependencies": {
+    "global": "^4.4.0",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4"
+  }
+}

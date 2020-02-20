@@ -1,0 +1,21 @@
+version: '3'
+services:
+  client:
+    build: 
+      context: .
+      dockerfile: Dockerfile.client
+    volumes:
+      - ./client:/src
+    tty: true
+    working_dir: /src
+    command: [sh, -c, yarn install && yarn dev]
+    ports:
+      - '8080:8080'
+      - '7070:7070'
+
+  # server:
+  #   image: node:11.8.0
+  #   ports:
+  #     - 8081:8081
+  # nginx:
+  #   image: 

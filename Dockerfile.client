@@ -1,0 +1,15 @@
+FROM node:11.8.0
+
+WORKDIR /src
+
+RUN yarn global add parcel-bundler
+
+RUN yarn add react react-dom
+RUN yarn add -D babel-preset-env babel-preset-react react-hot-loader
+RUN yarn add -D uikit-react
+
+RUN yarn install
+
+EXPOSE 8080
+
+CMD ["yarn", "dev"]
